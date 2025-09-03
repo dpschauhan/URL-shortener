@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Maker</title>
+</head>
+<body>
+    <H1>Hi Welcome to the URL Maker Page Here You can Form Your Small URL From Large URL</H1>
+    <form action="/create" method="post">
+        <label for="longUrl">Enter Long URL:</label>
+        <input type="text" id="longUrl" name="longUrl" required>
+        <button type="submit">Create Short URL</button>
+    </form>
+    <div th:if="${shortUrl}">
+        <h2>Your Short URL:</h2>
+        <a th:href="${shortUrl}" th:text="${shortUrl}"></a>
+    </div>
+</body>
+</html>
